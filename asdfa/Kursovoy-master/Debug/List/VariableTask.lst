@@ -1,0 +1,483 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         23/May/2020  10:21:57
+# Copyright 1999-2019 IAR Systems AB.
+#
+#    Cpu mode     =  
+#    Endian       =  little
+#    Source file  =
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask.cpp
+#    Command line =
+#        -f C:\Users\User\AppData\Local\Temp\EW4C7D.tmp
+#        (C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask.cpp -lC
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Debug\List -lA
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Debug\List -o
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Debug\Obj --no_cse --no_unroll
+#        --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling
+#        --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp
+#        --dlib_config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.3\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Rtos\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Rtos\wrapper\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Rtos\wrapper\FreeRtos\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Rtos\FreeRtos\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Rtos\FreeRtos\include\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Rtos\FreeRtos\portable\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Rtos\FreeRtos\portable\Common\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Rtos\FreeRtos\portable\IAR\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Rtos\FreeRtos\portable\IAR\ARM_CM4F\
+#        -I C:\Kod_Kurs\Kurs\Kursovoy-master\Rtos\FreeRtos\portable\MemMang\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\MyTasks\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Common\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\CMSIS\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Application\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Application\Diagnostic\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\GpioPort\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\IrqController\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\..\CortexLib-master\AbstractHardware\Pin\
+#        -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers\STM32F411\FieldValues\
+#        -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers\STM32F411\
+#        -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\..\CortexLib-master\AbstractHardware\Registers\
+#        -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\..\CortexLib-master\AbstractHardware\Port\
+#        -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\..\CortexLib-master\AbstractHardware\Atomic\
+#        -I C:\Kod_Kurs\Kurs\Kursovoy-master\..\CortexLib-master\Common\ -I
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\..\CortexLib-master\Common\Singleton\
+#        -Ol --c++ --no_exceptions --no_rtti)
+#    Locale       =  C
+#    List file    =
+#        C:\Kod_Kurs\Kurs\Kursovoy-master\Debug\List\VariableTask.lst
+#    Object file  =  C:\Kod_Kurs\Kurs\Kursovoy-master\Debug\Obj\VariableTask.o
+#
+###############################################################################
+
+C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask.cpp
+      1          #include "VariableTask.hpp"
+
+      RCC::AHB1ENR::DMA2EN::Enable::Set();
+      ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",54  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+      2          
+      3          using myADC = ADC<ADC1>;
+                                   ^
+Error[Pe020]: identifier "ADC1" is undefined
+
+      T::CR2::ADON::Enable::Set(); // Enable ADC1
+      ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",49  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::On() [with T=<error-type>]" at line 11 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::CR1::RES::Bits12::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",69  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::CR1::RES::Bits10::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",73  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::CR1::RES::Bits8::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",77  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::CR1::RES::Bits6::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",81  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::CR1::RES::Bits12::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",85  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR1::SMP18::Cycles480::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",92  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR1::SMP18::Cycles15::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",95  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR1::SMP18::Cycles28::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",98  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR1::SMP18::Cycles56::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",101  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR1::SMP18::Cycles84::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",104  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR1::SMP18::Cycles112::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",107  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR1::SMP18::Cycles480::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",110  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR1::SMP18::Cycles480::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",114  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR2::SMP0::Cycles3::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",121  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR2::SMP0::Cycles15::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",124  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR2::SMP0::Cycles28::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",127  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR2::SMP0::Cycles56::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",130  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR2::SMP0::Cycles84::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",133  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR2::SMP0::Cycles112::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",136  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR2::SMP0::Cycles480::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",139  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+        T::SMPR2::SMP0::Cycles480::Set();
+        ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",143  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::adcConfig(Resolution, tSampleRate, tSampleRate)
+                    [with T=<error-type>]" at line 12 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+      T::SQR1::L::Conversions2::Set();
+      ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",151  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::SetChannels(uint32_t, uint32_t) [with
+                    T=<error-type>]" at line 13 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+      T::CR1::SCAN::Enable::Set();
+      ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",152  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::SetChannels(uint32_t, uint32_t) [with
+                    T=<error-type>]" at line 13 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+      T::CR2::EOCS::SingleConversion::Set();
+      ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",153  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::SetChannels(uint32_t, uint32_t) [with
+                    T=<error-type>]" at line 13 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+      T::CR2::CONT::SingleConversion::Set();
+      ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",154  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::SetChannels(uint32_t, uint32_t) [with
+                    T=<error-type>]" at line 13 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+      T::SQR3::SQ1::Set(channelNum1);
+      ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",157  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::SetChannels(uint32_t, uint32_t) [with
+                    T=<error-type>]" at line 13 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+      T::SQR3::SQ2::Set(channelNum2);
+      ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",158  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::SetChannels(uint32_t, uint32_t) [with
+                    T=<error-type>]" at line 13 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+      T::CR2::DMA::Enable::Set();
+      ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp",55  Error[Pe276]: name
+          followed by "::" must be a class or namespace name
+          detected during instantiation of "inline __interwork __vfp void
+                    ADC<T>::dmaConfig() [with T=<error-type>]" at line 14 of
+                    "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask
+                    .cpp"
+
+    static constexpr RegType Mask  = static_cast<RegType>((static_cast<RegType>(1U) << size) - static_cast<RegType>(1U)) ;
+                                                                                    ^
+"C:\Kod_Kurs\Kurs\CortexLib-master\AbstractHardware\Registers\registerfield.hpp",21  Error[Pe063]: 
+          shift count is too large
+          detected during:
+            instantiation of class "RegisterField<Reg, offset, size,
+                      AccessMode> [with Reg=DMA2::S0M0AR, offset=0U, size=32U,
+                      AccessMode=ReadWriteMode]" at line 737 of
+                      "C:\Kod_Kurs\Kurs\Kursovoy-master\..\CortexLib-master\Ab
+                      stractHardware\Registers\STM32F411\FieldValues\dma2field
+                      values.hpp"
+            instantiation of class "DMA2_S0M0AR_M0A_Values<Reg, offset, size,
+                      AccessMode, BaseType> [with Reg=DMA2::S0M0AR, offset=0U,
+                      size=32U, AccessMode=ReadWriteMode,
+                      BaseType=DMA2::DMA2S0M0ARBase]" at line 31 of
+                      "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\DMA.hpp"
+            instantiation of "inline __interwork __vfp void
+                      DMA<D>::TargetSet(uint32_t &) [with D=DMA2]" at line 59
+                      of "C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp"
+            instantiation of "inline __interwork __vfp void ADC<T>::dmaConfig()
+                      [with T=<error-type>]" at line 14 of
+                      "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTa
+                      sk.cpp"
+
+      assert(value < (1U << size)) ;
+                         ^
+"C:\Kod_Kurs\Kurs\CortexLib-master\AbstractHardware\Registers\registerfield.hpp",29  Warning[Pe063]: 
+          shift count is too large
+          detected during:
+            instantiation of "inline void RegisterField<Reg, offset, size,
+                      AccessMode>::Set(Reg::Type) [with Reg=DMA2::S0M0AR,
+                      offset=0U, size=32U, AccessMode=ReadWriteMode,
+                      T=ReadWriteMode, <unnamed>=void]" at line 31 of
+                      "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\DMA.hpp"
+            instantiation of "inline __interwork __vfp void
+                      DMA<D>::TargetSet(uint32_t &) [with D=DMA2]" at line 59
+                      of "C:\Kod_Kurs\Kurs\Kursovoy-master\AHardware\ADC.hpp"
+            instantiation of "inline __interwork __vfp void ADC<T>::dmaConfig()
+                      [with T=<error-type>]" at line 14 of
+                      "C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTa
+                      sk.cpp"
+      4          using namespace std;
+      5          
+      6          void VariableTask::Execute()
+      7          {
+      8            for( ; ;)
+      9            {
+     10              //Koldunstvo s ADC
+     11              myADC::On(); //vkluchaen adc
+     12              myADC::adcConfig(Resolution::Bits12, tSampleRate::Cycles480, tSampleRate::Cycles480); //nastraivaem adc
+     13              myADC::SetChannels(0, 18); //podkluchaem kanali
+     14              myADC::dmaConfig(); //podkluchaem DMA
+     15              myADC::GetValue(); //po idee, uzhe ne nuzhen
+                     ^
+Error[Pe245]: a nonstatic member reference must be relative to a specific
+          object
+     16              
+     17              //Koldunstvo s IVariable(poluchaem temperature and voltage)
+     18              IVariable::Calculation(); //chitaem
+                     ^
+Error[Pe245]: a nonstatic member reference must be relative to a specific
+          object
+     19              IVariable::GetValueAndName();
+                     ^
+Error[Pe245]: a nonstatic member reference must be relative to a specific
+          object
+     20              TemperatureValue =  tuple_;//poluchaem temperaturu
+                                         ^
+Error[Pe020]: identifier "tuple_" is undefined
+     21              VoltageValue = IVariable::GetValue(); //poluchaem voltage
+                                    ^
+Error[Pe245]: a nonstatic member reference must be relative to a specific
+          object
+     22              
+     23              //Vivodim chernila
+     24              std::cout << "Temperature: " << std::get<0>(TemperatureValue) << std::get<1>(TemperatureValue) << std::endl;
+                          ^
+Error[Pe135]: namespace "std" (declared at line 180 of "C:\Program Files
+          (x86)\IAR Systems\Embedded Workbench 8.3\arm\inc\c\yvals.h") has no
+          member "cout"
+
+      std::cout << "Temperature: " << std::get<0>(TemperatureValue) << std::get<1>(TemperatureValue) << std::endl;
+                                      ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask.cpp",24  Error[Pe304]: 
+          no instance of overloaded function "std::get" matches the argument
+          list
+            argument types are: (float)
+
+      std::cout << "Temperature: " << std::get<0>(TemperatureValue) << std::get<1>(TemperatureValue) << std::endl;
+                                                                       ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask.cpp",24  Error[Pe304]: 
+          no instance of overloaded function "std::get" matches the argument
+          list
+            argument types are: (float)
+     25              std::cout << "Voltage: " << VoltageValue << " V. ' << std::endl;
+                          ^
+Error[Pe135]: namespace "std" (declared at line 180 of "C:\Program Files
+          (x86)\IAR Systems\Embedded Workbench 8.3\arm\inc\c\yvals.h") has no
+          member "cout"
+
+      std::cout << "Voltage: " << VoltageValue << " V. ' << std::endl;
+                                                  ^
+"C:\Kod_Kurs\Kurs\Kursovoy-master\Application\VariableTask.cpp",25  Error[Pe008]: 
+          missing closing quote
+     26               
+     27              //Koldunstvo s knopkoi
+     28              Sleep(500);
+                     ^
+Error[Pe065]: expected a ";"
+     29              if (myEvent.Wait() !=0)
+     30              {
+     31                Temperature::NextUnits;
+                       ^
+Error[Pe276]: name followed by "::" must be a class or namespace name
+     32              }
+     33              
+     34            } 
+     35          }
+     36          
+     37          VariableTask::VariableTask(OsWrapper::Event& event): myEvent(event)
+     38          {
+     39          }
+
+Errors: 44
+Warnings: 1
